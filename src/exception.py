@@ -1,11 +1,12 @@
 import sys 
+from src.logger import logging
 
 
 class CustomException(Exception):
     def __init__(self,error_message,error_details:sys):
 
-    super().__init__(error_message)
-    self.error_message = error_message_detail(error_message,error_detail = error_detail)
+        super().__init__(error_message)
+        self.error_message = error_message_detail(error_message,error_detail = error_details)
 
     def __str__(self):
         return self.error_message
